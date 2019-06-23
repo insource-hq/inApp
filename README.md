@@ -1,1 +1,1 @@
-# theAndroidApp
+# InSource Android Application Project
