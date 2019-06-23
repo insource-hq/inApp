@@ -5,10 +5,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".view.Splash"
-        android:background="@color/colorPrimary">
+        android:background="@color/primaryColor">
 
     <ImageView android:layout_width="100dp" android:layout_height="100dp"
-               android:src="@color/colorPrimaryDark"
+               android:src="@color/secondaryColor"
                app:layout_constraintTop_toTopOf="parent"
                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
                app:layout_constraintStart_toStartOf="parent"

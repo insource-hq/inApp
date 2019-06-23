@@ -18,7 +18,7 @@ class Splash : AppCompatActivity(), SplashPresenterInterface.View {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         var handle = Handler()
-        handle.postDelayed({ startActivity( Intent(this@Splash, LoginActivity::class.java) ) }, 1200)
+        handle.postDelayed({}, 1200)
         sharedPreferences = getSharedPreferences("Login_Data", Context.MODE_PRIVATE)
 
     }

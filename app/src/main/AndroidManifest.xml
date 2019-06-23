@@ -12,9 +12,11 @@
             android:theme="@style/AppTheme" tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".view.OrderActivity">
         </activity>
-        <activity android:name=".view.RegisterActivity">
+        <activity android:name=".view.RegisterActivity"
+                  android:theme="@style/FullScreen">
         </activity>
-        <activity android:name=".view.LoginActivity">
+        <activity android:name=".view.LoginActivity"
+                  android:theme="@style/FullScreen">
         </activity>
         <activity android:name=".view.Splash"
                   android:theme="@style/FullScreen">

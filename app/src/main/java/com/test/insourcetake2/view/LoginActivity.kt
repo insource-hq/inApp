@@ -27,7 +27,7 @@ class LoginActivity : AppCompatActivity(), LoginPresenterInterface.View, Network
     }
 
     override fun showSucessfullLoginToast(message: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        Toast.makeText(this@LoginActivity, message, Toast.LENGTH_LONG).show()
     }
 
     override fun showUnsucessfulLoginToast(message: String) {

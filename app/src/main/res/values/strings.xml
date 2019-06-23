@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">In Source</string>
     <string name="in_source">In Source</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="first_name">first name</string>
+    <string name="last_name">last name</string>
+    <string name="password_confirm">Confirm Password</string>
+    <string name="phone_number">phone number</string>
+    <string name="employee_numer">Employee Number</string>
+    <string name="position">Position</string>
+    <string name="company_name">Company Name</string>
+    <string name="Linkedin">Linkedin Account</string>
+    <string name="textview">Order:</string>
+    <string name="time_to_go">Time:</string>
+    <string name="title">Title:</string>
 </resources>
