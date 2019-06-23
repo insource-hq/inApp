@@ -1,10 +1,10 @@
 package com.test.insourcetake2.presenter
 
 import android.util.Log
-import com.test.insourcetake2.model.Order
 import com.test.insourcetake2.apiUtils.ApiUtils
 import com.test.insourcetake2.contracts.BasePresenter
 import com.test.insourcetake2.contracts.OrderPresenterInterface
+import com.test.insourcetake2.model.Order
 import com.test.insourcetake2.model.OrderDetails
 import retrofit2.Call
 import retrofit2.Callback
@@ -22,7 +22,11 @@ class OrdersPresenter : OrderPresenterInterface.Presenter, BasePresenter<OrderPr
             }
 
             override fun onResponse(call: Call<Order>, response: Response<Order>) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                if (response.isSuccessful) {
+                    getView()?.showSucessfullToast(response.body()?.getMessage()!!)
+                } else {
+                    getView()?.showUnsucessfulToast(response.body()?.getMessage()!!)
+                }
             }
         })
     }
@@ -31,11 +35,16 @@ class OrdersPresenter : OrderPresenterInterface.Presenter, BasePresenter<OrderPr
 
         networkCall.getServiceClass()?.deleteOrderById(id)?.enqueue(object : Callback<Order> {
             override fun onFailure(call: Call<Order>, t: Throwable) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                getView()?.showUnsucessfulToast("Network Error")
+                Log.e("Add Order Error", t.message.toString())
             }
 
             override fun onResponse(call: Call<Order>, response: Response<Order>) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                if (response.isSuccessful) {
+                    getView()?.showSucessfullToast(response.body()?.getMessage()!!)
+                } else {
+                    getView()?.showUnsucessfulToast(response.body()?.getMessage()!!)
+                }
             }
         })
 

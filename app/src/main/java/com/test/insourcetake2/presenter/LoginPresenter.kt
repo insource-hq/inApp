@@ -1,12 +1,11 @@
 package com.test.insourcetake2.presenter
 
-import android.text.TextUtils
 import android.util.Log
 import android.util.Patterns
-import com.test.insourcetake2.model.AuthToken
 import com.test.insourcetake2.apiUtils.ApiUtils
 import com.test.insourcetake2.contracts.BasePresenter
 import com.test.insourcetake2.contracts.LoginPresenterInterface
+import com.test.insourcetake2.model.AuthToken
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
