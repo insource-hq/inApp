@@ -13,12 +13,13 @@ class Splash : AppCompatActivity(), SplashPresenterInterface.View {
 
 
     lateinit var sharedPreferences: SharedPreferences
+    val SPLASH_TIME = 3000L //3 Sec
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         var handle = Handler()
-        handle.postDelayed({}, 1200)
+        handle.postDelayed({}, SPLASH_TIME)
         sharedPreferences = getSharedPreferences("Login_Data", Context.MODE_PRIVATE)
 
     }
@@ -27,4 +28,8 @@ class Splash : AppCompatActivity(), SplashPresenterInterface.View {
         return sharedPreferences.getString("token", "")
     }
 
+    override fun startLoginActivity() {
+        startActivity(Intent(this@Splash, LoginActivity::class.java))
+        finish()
+    }
 }

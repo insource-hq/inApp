@@ -16,6 +16,8 @@ interface SplashPresenterInterface {
 
     interface View {
         fun getToken() : String?
+
+        fun startLoginActivity()
     }
 
 
